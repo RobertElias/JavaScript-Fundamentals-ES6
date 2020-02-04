@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="index.js"></script>
+  <title>JavaScript: Filter out the specified values from a specified array</title>
+</head>
+
+<body>
+  <h1>Inspect The console!!!</h1>
+  <p>JavaScript: Filter out the specified values from a specified array.</p>
+  <pre>
+    <code>
+        const pull = (arr, ...args) => {
+            let argState = Array.isArray(args[0]) ? args[0] : args;
+            let pulled = arr.filter((v, i) => !argState.includes(v));
+            arr.length = 0;
+            pulled.forEach(v => arr.push(v));
+            return pulled;
+          };
+          let arra1 = ['a', 'b', 'c', 'a', 'b', 'c'];
+          console.log(pull(arra1, 'a', 'c'));
+          let arra2 =  ['a', 'b', 'c', 'a', 'b', 'c'];
+          console.log(pull(arra2, 'b'));
+    
+      /* Sample Output
+      ["b","b"]
+      ["a","c","a","c"]
+      */  
+    </code>
+</pre>
+
+
+
+</body>
+
+</html>
