@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="index.js"></script>
+    <title>JavaScript: Clone an array</title>
+</head>
+
+<body>
+    <h1>Inspect The console!!!</h1>
+    <p>JavaScript: Clone an array.</p>
+    <pre>
+    <code>
+        var array_Clone = function(arra1) {
+            return arra1.slice(0);
+               };
+           console.log(array_Clone([1, 2, 4, 0]));
+           console.log(array_Clone([1, 2, [4, 0]]));
+      /* Sample Output
+      [1,2,4,0]
+      [1,2,[4,0]]
+      */  
+    </code>
+</pre>
+</body>
+
+</html>
